@@ -62,11 +62,6 @@ endif
 syntax on
 colorscheme sublimemonokai
 
-filetype on
-filetype plugin on
-filetype indent on
-syntax enable
-
 set number
 set expandtab shiftwidth=2 softtabstop=2 smarttab
 set foldmethod=manual
@@ -84,4 +79,24 @@ function! <SID>SynStack()
 
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+filetype on                 " Enable filetype detection
+filetype plugin on          " Enable filetype dection for plugins
+filetype indent on          " Enable indention by filetype
+syntax   enable             " Turn on syntax highlighting
+
+" Auto-backup files and .swp files don't go to pwd
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+autocmd Filetype php setlocal ts=4 sw=4 expandtab
+
+" INDENT LINE: draw lines every intention
+" Custom color
+let g:indentLine_color_term = 239
+" enables them by default
+let g:indentLine_enabled = 1
+" By default, every indent level gets a `|`. This will give a different character for each level of indent
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
