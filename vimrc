@@ -69,8 +69,7 @@ set hls
 set list " Mark tabs, EOL, trailing whitespace, etc
 exec "set listchars=tab:--,trail:\uB7,nbsp:~,eol:↓,extends:>,precedes:<,space:\uB7"
 
-" Show highlighting groups for current word
-nmap <C-S-P> :call <SID>SynStack()<CR>
+nmap <C-S-T> :call <SID>SynStack()<CR>
 
 function! <SID>SynStack()
   if !exists("*synstack")
@@ -89,6 +88,7 @@ syntax   enable             " Turn on syntax highlighting
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set clipboard=unnamed
 
 autocmd Filetype php setlocal ts=4 sw=4 expandtab
 
@@ -99,4 +99,42 @@ let g:indentLine_color_term = 239
 let g:indentLine_enabled = 1
 " By default, every indent level gets a `|`. This will give a different character for each level of indent
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+"let g:vim_jsx_pretty_colorful_config = 1 " default 
+"let g:vim_jsx_pretty_template_tags = ['html', 'raw']
+"let g:vim_jsx_pretty_highlight_close_tag = 1
+
+" CTRL-P
+map <leader>j :CtrlPBuffer<cr>
+let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor\|public'
+let g:ctrlp_working_path_mode = 'ra'
+
+if executable('ag')
+  nnoremap <Leader>a :Ack!<Space>
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
+" Ack searching
+map <leader>a :Ack!<space>
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_enable_signs  = 1
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers=['eslint']
+"let g:syntastic_javascript_eslint_exe='node_modules/.bin/eslint'
+"let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+"let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+
+" Airline
+let g:airline#extensions#syntastic#enabled  = 1
+set laststatus=2            " Always show the statusline; must be on for airline
+let g:airline#extensions#tagbar#enabled = 0 " IF you have Tagbar installed
+let g:airline#extensions#whitespace#enabled = 1
 
