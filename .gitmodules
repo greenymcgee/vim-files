@@ -40,3 +40,9 @@
 [submodule "pack/plugins/start/vim-rooter"]
 	path = pack/plugins/start/vim-rooter
 	url = https://github.com/airblade/vim-rooter.git
+[submodule "pack/plugins/start/php-vim"]
+	path = pack/plugins/start/php-vim
+	url = https://github.com/StanAngeloff/php.vim.git
+[submodule "pack/plugins/start/vim-blade"]
+	path = pack/plugins/start/vim-blade
+	url = https://github.com/jwalton512/vim-blade.git
