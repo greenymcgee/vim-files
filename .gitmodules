@@ -46,3 +46,15 @@
 [submodule "pack/plugins/start/vim-blade"]
 	path = pack/plugins/start/vim-blade
 	url = https://github.com/jwalton512/vim-blade.git
+[submodule "pack/plugins/start/ultisnips"]
+	path = pack/plugins/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "pack/plugins/start/dadbod"]
+	path = pack/plugins/start/dadbod
+	url = https://github.com/tpope/vim-dadbod.git
+[submodule "pack/plugins/start/vim-dotenv"]
+	path = pack/plugins/start/vim-dotenv
+	url = https://github.com/tpope/vim-dotenv.git
+[submodule "pack/plugins/start/ale"]
+	path = pack/plugins/start/ale
+	url = https://github.com/dense-analysis/ale.git

@@ -868,3 +868,19 @@ hi! link jsExtendsKeyword         SublimeAqua
 hi! link jsClassKeyword         SublimeAqua
 hi! link jsClassDefinition        SublimeGreen
 
+" ---------------------------------------------------------------------------
+" snippets
+" ---------------------------------------------------------------------------
+hi link snipLeadingSpaces rubyStringDelimiter
+hi link snipSnippet SublimePink
+hi link snipSnippetHeaderKeyword Keyword
+hi link snipSnippetFooterKeyword Keyword
+hi link snipSnippetTrigger SublimeGreen
+hi link snipSnippetDocString rubyString
+hi link snipTabStop SublimeWhite
+hi link snipTabStopDefault rubyConstant
+hi link snipVisual rubyConstant
+hi link snipVisualDefault rubyConstant
+hi link snipMirror constant
+hi link snipSnippetOptions SublimeAqua
+

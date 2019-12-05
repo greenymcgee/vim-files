@@ -64,6 +64,8 @@ colorscheme sublimemonokai
 
 set number
 set expandtab shiftwidth=2 softtabstop=2 smarttab
+autocmd Filetype php setlocal ts=4 sw=4 expandtab
+set textwidth=80
 set foldmethod=manual
 set hls
 set list " Mark tabs, EOL, trailing whitespace, etc
@@ -90,7 +92,6 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set clipboard=unnamed
 
-autocmd Filetype php setlocal ts=4 sw=4 expandtab
 
 " INDENT LINE: draw lines every intention
 " Custom color
@@ -99,10 +100,6 @@ let g:indentLine_color_term = 239
 let g:indentLine_enabled = 1
 " By default, every indent level gets a `|`. This will give a different character for each level of indent
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-"let g:vim_jsx_pretty_colorful_config = 1 " default 
-"let g:vim_jsx_pretty_template_tags = ['html', 'raw']
-"let g:vim_jsx_pretty_highlight_close_tag = 1
 
 " CTRL-P
 map <leader>j :CtrlPBuffer<cr>
@@ -117,20 +114,9 @@ endif
 " Ack searching
 map <leader>a :Ack!<space>
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_enable_signs  = 1
-"let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers=['eslint']
-"let g:syntastic_javascript_eslint_exe='node_modules/.bin/eslint'
-"let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
-"let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+" ALE
+let g:airline#extensions#ale#enabled = 1
+highlight ALEError ctermbg=52
 
 " Airline
 let g:airline#extensions#syntastic#enabled  = 1
@@ -138,3 +124,21 @@ set laststatus=2            " Always show the statusline; must be on for airline
 let g:airline#extensions#tagbar#enabled = 0 " IF you have Tagbar installed
 let g:airline#extensions#whitespace#enabled = 1
 
+" Ultisnips
+let g:UltiSnipsSnippetsDir="~/code/snips"
+let g:UltiSnipsSnippetDirectories=['~/code/snips']
+let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsExpandTrigger="<tab>"
+
+" Dadbod
+vmap <leader>e :DB<cr>
+nmap <leader>e vip:DB<cr>
+
+nmap <leader>d :Dotenv .env.development<cr>
+nmap <leader>p :Dotenv .env.production<cr>
+
+" NERDTree
+let NERDTreeIgnore = ['\.DS_Store$']
+
+" % matches on if/else, html tags, etc.
+runtime macros/matchit.vim
