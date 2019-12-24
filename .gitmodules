@@ -58,3 +58,12 @@
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "pack/plugins/start/ferret"]
+	path = pack/plugins/start/ferret
+	url = https://github.com/wincent/ferret.git
+[submodule "pack/plugins/start/vim-rails"]
+	path = pack/plugins/start/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "pack/plugins/start/vim-ruby"]
+	path = pack/plugins/start/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
