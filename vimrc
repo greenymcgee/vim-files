@@ -27,9 +27,6 @@ if has("autocmd")
   augroup vimrcEx
   au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
   augroup END
 
 else
@@ -100,6 +97,8 @@ let g:indentLine_color_term = 239
 let g:indentLine_enabled = 1
 " By default, every indent level gets a `|`. This will give a different character for each level of indent
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" Disable indentline in json files because it hides double quotes
+au Filetype json :IndentLinesDisable
 
 " CTRL-P
 map <leader>j :CtrlPBuffer<cr>

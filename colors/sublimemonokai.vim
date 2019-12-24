@@ -884,3 +884,4 @@ hi link snipVisualDefault rubyConstant
 hi link snipMirror constant
 hi link snipSnippetOptions SublimeAqua
 
+hi link jsonQuote SublimeWhite
