@@ -2,7 +2,7 @@
 
 This is my personal vim setup. Feel free to clone it and use it for yourself!
 
-**Installation**
+### Installation
 
 I'm using `VIM - Vi IMproved 8.1` and I have installed all of my plugins as
 submodules. If you would like to use my setup then you will need to run the
