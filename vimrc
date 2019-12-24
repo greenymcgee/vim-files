@@ -97,8 +97,9 @@ let g:indentLine_color_term = 239
 let g:indentLine_enabled = 1
 " By default, every indent level gets a `|`. This will give a different character for each level of indent
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-" Disable indentline in json files because it hides double quotes
+" Disable indentline in specific files because it hides double quotes
 au Filetype json :IndentLinesDisable
+au Filetype markdown :IndentLinesDisable
 
 " CTRL-P
 map <leader>j :CtrlPBuffer<cr>
