@@ -67,3 +67,6 @@
 [submodule "pack/plugins/start/vim-ruby"]
 	path = pack/plugins/start/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "pack/plugins/start/supertab"]
+	path = pack/plugins/start/supertab
+	url = https://github.com/ervandew/supertab.git
