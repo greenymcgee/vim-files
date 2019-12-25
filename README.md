@@ -13,7 +13,7 @@ git clone --recursive https://github.com/greenymcgee/vim-files.git ~/.vim
 ```
 
 **If you are using a version less than 7.4** then you will need to link the
-vimrc file to you home directory as a dotfile.
+vimrc file to your home directory as a dotfile.
 
 ```
 ln -s ~/.vim/vimrc ~/.vimrc
