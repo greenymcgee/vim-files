@@ -68,7 +68,7 @@ set hls
 set list " Mark tabs, EOL, trailing whitespace, etc
 exec "set listchars=tab:--,trail:\uB7,nbsp:~,eol:↓,extends:>,precedes:<,space:\uB7"
 
-nmap <C-S-T> :call <SID>SynStack()<CR>
+nmap <C-Y> :call <SID>SynStack()<CR>
 
 function! <SID>SynStack()
   if !exists("*synstack")
@@ -106,17 +106,18 @@ map <leader>j :CtrlPBuffer<cr>
 let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor\|public'
 let g:ctrlp_working_path_mode = 'ra'
 
+" Ack searching
 if executable('ag')
-  nnoremap <Leader>a :Ack!<Space>
+  nnoremap <leader>a :Ack!<Space>
   let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
 
-" Ack searching
 map <leader>a :Ack!<space>
 
 " ALE
 let g:airline#extensions#ale#enabled = 1
 highlight ALEError ctermbg=52
+highlight ALEWarning ctermbg=52
 
 " Airline
 let g:airline#extensions#syntastic#enabled  = 1
@@ -128,17 +129,36 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:UltiSnipsSnippetsDir="~/code/snips"
 let g:UltiSnipsSnippetDirectories=['~/code/snips']
 let g:UltiSnipsEditSplit='vertical'
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-t>"
 
 " Dadbod
 vmap <leader>e :DB<cr>
 nmap <leader>e vip:DB<cr>
 
-nmap <leader>d :Dotenv .env.development<cr>
-nmap <leader>p :Dotenv .env.production<cr>
+" vim-dotenv
+" Keeping in case they become useful
+"nmap <leader>d :Dotenv .env.development<cr>
+"nmap <leader>p :Dotenv .env.production<cr>
 
 " NERDTree
 let NERDTreeIgnore = ['\.DS_Store$']
 
 " % matches on if/else, html tags, etc.
 runtime macros/matchit.vim
+
+" Tsuquyomi
+map <leader>d :TsuDefinition<cr>
+
+" show last two messages
+map <leader>m :2messages<cr>
+
+" re source vimrc
+map <leader>s :source ~/.vim/vimrc<cr>
+
+" Capitalize last word
+" useful for types 
+" const THIS_THING = 'THIS_THING';
+imap <c-u> <esc>vbUea
+
+" Temporary fix for tsx
+autocmd BufRead *.tsx set filetype=javascript

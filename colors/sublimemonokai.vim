@@ -858,6 +858,9 @@ hi! link zshTypes    Keyword
 "     Vim
 " * Commands aren't distinct from builtins and keywords in Vim
 "
+" ---------------------------------------------------------------------------
+" JSX
+" ---------------------------------------------------------------------------
 hi! link jsxTagName           SublimePink
 hi! link jsxPunct             SublimeWhite
 hi! link jsxAttrib            SublimeGreen
@@ -867,6 +870,58 @@ hi! link jsArrowFunction         SublimeWhite
 hi! link jsExtendsKeyword         SublimeAqua
 hi! link jsClassKeyword         SublimeAqua
 hi! link jsClassDefinition        SublimeGreen
+
+" ---------------------------------------------------------------------------
+" Typescript
+" ---------------------------------------------------------------------------
+hi! link typescriptClassKeyword   SublimeAqua
+hi! link typescriptClassName   SublimeGreen
+hi! link typescriptClassExtends   SublimeAqua
+hi! link typescriptClassHeritage   SublimeAqua
+hi! link typescriptImport   SublimePink
+hi! link typescriptExport   SublimePink
+hi! link typescriptTypeBrackets   SublimeWhite
+hi! link typescriptCall   SublimeOrange
+hi! link typescriptMember   SublimeGreen
+hi! link typescriptParens   SublimeWhite
+hi! link typescriptIdentifier   SublimeOrange
+hi! link typescriptInterfaceExtends   SublimeAqua
+hi! link typescriptFunctionMethod   SublimeAqua
+hi! link typescriptDOMEventMethod   SublimeAqua
+hi! link typescriptBOMHistoryProp   SublimeWhite
+hi! link typescriptBOMWindowMethod   SublimeAqua
+hi! link typescriptFuncType   SublimeOrange
+hi! link typescriptTypeReference   SublimeGreen
+hi! link typescriptStatementKeyword   SublimePink
+hi! link typescriptFuncComma   SublimeWhite
+hi! link typescriptVariable   SublimeAqua
+hi! link typescriptAssign   SublimePink
+hi! link typescriptNull   SublimePurple
+hi! link typescriptInterfaceKeyword   SublimeAqua
+hi! link typescriptTestGlobal   SublimeAqua
+hi! link typescriptGlobal   SublimeAqua
+hi! link typescriptOperator   SublimePink
+hi! link typescriptCastKeyword   SublimePink
+hi! link typescriptTry   SublimePink
+hi! link typescriptExceptions   SublimePink
+hi! link typescriptBlock   SublimeAqua
+hi! link typescriptParenExp   SublimeOrange
+hi! link typescriptArrowFuncArg   SublimeOrange
+hi! link typescriptPredefinedType   SublimePink
+hi! link typescriptObjectLabel   SublimeAqua
+hi! link typescriptTypeParameter   SublimeGreen
+" These do not work because they are a transparent group.
+" I have no idea why or what that means, but it is what it is.
+hi! link typescriptIdentifierName   SublimeAqua
+hi! link typescriptProp   SublimeAqua
+
+" ---------------------------------------------------------------------------
+" tsx
+" ---------------------------------------------------------------------------
+
+hi! link tsxTagName   SublimePink
+hi! link tsxCloseTag   SublimeWhite
+hi! link tsxAttrib   SublimeGreen
 
 " ---------------------------------------------------------------------------
 " snippets
